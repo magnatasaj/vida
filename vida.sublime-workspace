@@ -1,0 +1,439 @@
+{
+	"auto_complete":
+	{
+		"selected_items":
+		[
+			[
+				"prin",
+				"print_r"
+			],
+			[
+				"Prin",
+				"printf"
+			],
+			[
+				"ur",
+				"url"
+			],
+			[
+				"contr",
+				"contrato_sequencia"
+			],
+			[
+				"bg",
+				"btn-lg"
+			],
+			[
+				"fun",
+				"function"
+			],
+			[
+				"q",
+				"query"
+			],
+			[
+				"V",
+				"V-solicitacao-criar"
+			],
+			[
+				"consulta",
+				"consultar"
+			],
+			[
+				"solici",
+				"solicitacao"
+			],
+			[
+				"consu",
+				"consultar"
+			],
+			[
+				"id",
+				"id_cliente"
+			],
+			[
+				"que",
+				"query1"
+			],
+			[
+				"result",
+				"cubrid_result"
+			],
+			[
+				"su",
+				"success"
+			],
+			[
+				"b",
+				"bo2"
+			],
+			[
+				"ma",
+				"margin"
+			],
+			[
+				"em",
+				"embed\tTag"
+			],
+			[
+				"ro",
+				"row"
+			],
+			[
+				"di",
+				"div\tTag"
+			],
+			[
+				"vi",
+				"view"
+			],
+			[
+				"th",
+				"this"
+			]
+		]
+	},
+	"buffers":
+	[
+	],
+	"build_system": "",
+	"build_system_choices":
+	[
+	],
+	"build_varint": "",
+	"command_palette":
+	{
+		"height": 392.0,
+		"last_filter": "git:p",
+		"selected_items":
+		[
+			[
+				"git:p",
+				"Git: Push"
+			],
+			[
+				"git:co",
+				"Git: Commit"
+			],
+			[
+				"git:a",
+				"Git: Add All"
+			],
+			[
+				"git:pu",
+				"Git: Push"
+			],
+			[
+				"git:be",
+				"Git: Change Branch"
+			],
+			[
+				"git:pus",
+				"Git: Push Current Branch"
+			],
+			[
+				"git:c",
+				"Git: Commit"
+			],
+			[
+				"git:bea",
+				"Git: Delete Branch"
+			],
+			[
+				"git:con",
+				"SublimeGit: Documentation"
+			],
+			[
+				"git:br",
+				"Git: New Branch"
+			],
+			[
+				"pu",
+				"Git: Pull"
+			],
+			[
+				"GIT:co",
+				"Git: Commit"
+			],
+			[
+				"GIT:a",
+				"Git: Add All"
+			],
+			[
+				"GIT:re",
+				"Git: Remote"
+			],
+			[
+				"GIT:n",
+				"Git: Init"
+			],
+			[
+				"GIT:c",
+				"Git: Commit"
+			],
+			[
+				"GIT:PUS",
+				"Git: Push"
+			],
+			[
+				"GIT:P",
+				"Git: Pull"
+			],
+			[
+				"GIT:CO",
+				"Git: Commit"
+			],
+			[
+				"GIT:A",
+				"Git: Add All"
+			],
+			[
+				"GIT:PU",
+				"Git: Push"
+			],
+			[
+				"A",
+				"Git: Add All"
+			],
+			[
+				"GIT:",
+				"Git: Commit"
+			],
+			[
+				"git:A",
+				"Git: Add All"
+			],
+			[
+				"git:C",
+				"Git: Commit"
+			],
+			[
+				"git:P",
+				"Git: Push"
+			],
+			[
+				"git:s",
+				"Git: Status"
+			],
+			[
+				"git:",
+				"Git: Pull"
+			],
+			[
+				"git",
+				"Git: Diff Tool All"
+			]
+		],
+		"width": 575.0
+	},
+	"console":
+	{
+		"height": 126.0,
+		"history":
+		[
+		]
+	},
+	"distraction_free":
+	{
+		"menu_visible": true,
+		"show_minimap": false,
+		"show_open_files": false,
+		"show_tabs": false,
+		"side_bar_visible": false,
+		"status_bar_visible": false
+	},
+	"expanded_folders":
+	[
+		"/opt/lampp/htdocs/vida/application"
+	],
+	"file_history":
+	[
+		"/opt/lampp/htdocs/vida/application/views/base para paginas.php",
+		"/opt/lampp/htdocs/vida/application/views/V-solicitacao.php",
+		"/opt/lampp/htdocs/vida/application/views/V-solicitacao-criar.php",
+		"/opt/lampp/htdocs/vida/application/views/V-solicitacao-consultar.php",
+		"/opt/lampp/htdocs/vida/application/views/V-painel.php",
+		"/opt/lampp/htdocs/vida/application/views/V-login.php",
+		"/opt/lampp/htdocs/vida/application/controllers/Login.php",
+		"/opt/lampp/htdocs/vida/application/models/M_login.php",
+		"/opt/lampp/htdocs/vida/application/config/config.php",
+		"/opt/lampp/htdocs/vida/application/controllers/Solicitacao.php",
+		"/opt/lampp/htdocs/vida/application/models/M_filial.php",
+		"/opt/lampp/htdocs/vida/application/config/database.php",
+		"/opt/lampp/htdocs/vida/application/views/temas/rodape-login.php",
+		"/opt/lampp/htdocs/vidabk/application/config/routes.php",
+		"/opt/lampp/htdocs/vidabk/application/config/autoloadbk.php",
+		"/opt/lampp/htdocs/vida/application/config/autoload.php",
+		"/opt/lampp/htdocs/vida/application/config/routes.php",
+		"/opt/lampp/htdocs/vidabk/application/config/config.php",
+		"/opt/lampp/htdocs/vida/application/models/M_cliente.php",
+		"/opt/lampp/htdocs/vida/application/controllers/solicitacao.php",
+		"/opt/lampp/htdocs/vida/application/controllers/welcome.php",
+		"/opt/lampp/htdocs/vida/application/controllers/login.php",
+		"/opt/lampp/htdocs/vida/application/controllers/solicitacaogerenciamento.php",
+		"/opt/lampp/htdocs/vida/vida.sublime-project",
+		"/opt/lampp/htdocs/vida/application/models/m_cliente.php",
+		"/opt/lampp/htdocs/vida/includes/css/styles.css"
+	],
+	"find":
+	{
+		"height": 23.0
+	},
+	"find_in_files":
+	{
+		"height": 0.0,
+		"where_history":
+		[
+		]
+	},
+	"find_state":
+	{
+		"case_sensitive": false,
+		"find_history":
+		[
+			"m_",
+			"<?=",
+			"m_",
+			"v-",
+			"V-",
+			"[\\r\\n]{2,}",
+			";\n"
+		],
+		"highlight": true,
+		"in_selection": false,
+		"preserve_case": false,
+		"regex": false,
+		"replace_history":
+		[
+			"M_",
+			"<?php echo",
+			"M_",
+			"V-",
+			"v-",
+			"\\n"
+		],
+		"reverse": false,
+		"show_context": true,
+		"use_buffer2": true,
+		"whole_word": false,
+		"wrap": true
+	},
+	"groups":
+	[
+		{
+			"sheets":
+			[
+			]
+		}
+	],
+	"incremental_find":
+	{
+		"height": 23.0
+	},
+	"input":
+	{
+		"height": 31.0
+	},
+	"layout":
+	{
+		"cells":
+		[
+			[
+				0,
+				0,
+				1,
+				1
+			]
+		],
+		"cols":
+		[
+			0.0,
+			1.0
+		],
+		"rows":
+		[
+			0.0,
+			1.0
+		]
+	},
+	"menu_visible": true,
+	"output.find_results":
+	{
+		"height": 0.0
+	},
+	"output.git":
+	{
+		"height": 100.0
+	},
+	"output.git-commit":
+	{
+		"height": 130.0
+	},
+	"output.git-init":
+	{
+		"height": 100.0
+	},
+	"output.git-merge":
+	{
+		"height": 100.0
+	},
+	"output.git-pull":
+	{
+		"height": 100.0
+	},
+	"output.git-push":
+	{
+		"height": 100.0
+	},
+	"output.git-remote":
+	{
+		"height": 100.0
+	},
+	"pinned_build_system": "",
+	"project": "vida.sublime-workspace",
+	"replace":
+	{
+		"height": 42.0
+	},
+	"save_all_on_build": true,
+	"select_file":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"select_project":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"select_symbol":
+	{
+		"height": 392.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 404.0
+	},
+	"selected_group": 0,
+	"settings":
+	{
+	},
+	"show_minimap": true,
+	"show_open_files": false,
+	"show_tabs": true,
+	"side_bar_visible": true,
+	"side_bar_width": 278.0,
+	"status_bar_visible": true,
+	"template_settings":
+	{
+	}
+}
