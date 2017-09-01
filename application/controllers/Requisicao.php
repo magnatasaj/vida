@@ -26,7 +26,7 @@ class Requisicao extends CI_Controller
         $row = $this->M_cliente->consultar_por_matricula($contrato);
         $data = array(
             'id_cliente' => $row->id_cliente ,
-            'id_login' => 45,//$this->session->userdata('id'),
+            'id_login' => $this->session->userdata('id'),
             'situacao' =>  1 );
         $grava = $this->Requisicao_model->insert($data);
         $dados = array("produtosVendidos" => $row);
