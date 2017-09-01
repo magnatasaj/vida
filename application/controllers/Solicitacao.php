@@ -22,24 +22,13 @@ class Solicitacao extends CI_Controller {
     public function consultar() {
 
         $matricula = $this->input->post('matricula');
-        $query['resultado'] = $this->M_cliente->consultar_por_matricula($matricula);
+        $row = $this->M_cliente->consultar_por_matricula($matricula);
         $v; $s; $n; $contrato; $sequencia;
         $id;
 
-        foreach ($query['resultado'] as $r){
-            $id = $r['id_cliente'];
-            $v = $r['validade'];
-            $s = $r['situacao'];
-            $n = $r['nome'];
-            $contrato = $r['contrato'];
-            $sequencia = $r['contrato_sequencia'];
-        }
-
-      
-
-        if( $id > 0){
+        if( $row->id_cliente > 0){
             
-        $this->load->view('V-solicitacao-consultar',$query);
+       $this->load->view('V-solicitacao-consultar',$row);
         }else{
          $this->session->set_flashdata('erro','Cartão não encontrado na base de dados!'.
           '<br> Atendente, solicite que o cliente que  entre em contato, e peça o seu ExistenceCard Tel: (75) 3631-5469');

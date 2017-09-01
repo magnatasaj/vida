@@ -28,7 +28,8 @@ class Login extends CI_Controller {
         if ($boleano) {
             $d_sessao = array(
                 'id' => '1',
-                'login' => $login
+                'login' => $login,
+                'filial' => $filial
             );
             $this->session->set_userdata($d_sessao);
             $this->load->view('V-painel');

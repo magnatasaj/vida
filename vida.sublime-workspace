@@ -104,12 +104,16 @@
 	"command_palette":
 	{
 		"height": 392.0,
-		"last_filter": "git:p",
+		"last_filter": "git:ma",
 		"selected_items":
 		[
 			[
-				"git:p",
-				"Git: Push"
+				"git:ma",
+				"Git: Merge Branch"
+			],
+			[
+				"git:pu",
+				"Git: Pull"
 			],
 			[
 				"git:co",
@@ -120,7 +124,7 @@
 				"Git: Add All"
 			],
 			[
-				"git:pu",
+				"git:p",
 				"Git: Push"
 			],
 			[
@@ -224,7 +228,7 @@
 				"Git: Diff Tool All"
 			]
 		],
-		"width": 575.0
+		"width": 485.0
 	},
 	"console":
 	{
@@ -242,10 +246,6 @@
 		"side_bar_visible": false,
 		"status_bar_visible": false
 	},
-	"expanded_folders":
-	[
-		"/opt/lampp/htdocs/vida/application"
-	],
 	"file_history":
 	[
 		"/opt/lampp/htdocs/vida/application/views/base para paginas.php",

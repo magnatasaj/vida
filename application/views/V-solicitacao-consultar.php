@@ -19,7 +19,6 @@
                             <button type="submit" class="btn btn-primary">Consultar um novo</button>
                         </fieldset>
                     </form>
-                    <?php foreach ($resultado as $r){ ?> 
                     <div class="col-lg-6">
 
                         <ul class="timeline">
@@ -30,13 +29,13 @@
                                         <h4 class="timeline-title">Nome:</h4>
                                     </div>
                                     <div class="timeline-body">
-                                        <p><?php echo$r['nome'];?></p>
+                                        <p><?php echo $nome;?></p>
                                     </div>
                                 </div>
                             </li>
                             <li>
                                 <div class="timeline-badge
-                                <?php if( $r['situacao'] != 1){echo 'danger';}else{echo 'success';} ?>
+                                <?php if( $situacao != 1){echo 'danger';}else{echo 'success';} ?>
 
                                 "><em  style="margin-top:8px; " class="glyphicon glyphicon-tags"></em></div>
                                 <div class="timeline-panel green ">
@@ -44,8 +43,8 @@
                                         <h4 class="timeline-title">CPF:</h4>
                                     </div>
                                     <div class="timeline-body" >
-                                        <p><?php echo$r['cpf'];?></p>
-                                        <?php if( $r['situacao'] != 1){
+                                        <p><?php echo $cpf;?></p>
+                                        <?php if( $situacao != 1){
                                            echo '<p style="color:red;">Há pendencias com o cartão consultado!</p>'
                                            . '<p> Atendente, solicite que o cliente entre em contato com a Existence carde Tel: (75) 3631-5469<p>';
                                        }?>
@@ -54,7 +53,7 @@
                            </li>
                            <li>
                             <div class="timeline-badge 
-                            <?php if( strtotime($r['validade']) < strtotime(date('Y-m-d'))){echo 'danger';}else{echo 'success';} ?>
+                            <?php if( strtotime($validade) < strtotime(date('Y-m-d'))){echo 'danger';}else{echo 'success';} ?>
 
                             "><em style="margin-top:8px; " class="glyphicon glyphicon-calendar"></em></div>
                             <div class="timeline-panel">
@@ -66,12 +65,12 @@
 
                                     <p>
 
-                                        <?php if(strtotime($r['validade']) < strtotime(date('Y-m-d'))){
-                                            echo '<p style="color:red;">A validade do cartão está vencida!</p> <p>Validade:'. date('d/m/Y', strtotime($r['validade'])).'</p>'
+                                        <?php if(strtotime($validade) < strtotime(date('Y-m-d'))){
+                                            echo '<p style="color:red;">A validade do cartão está vencida!</p> <p>Validade:'. date('d/m/Y', strtotime($validade)).'</p>'
                                             . '<p> Atendente, solicite que o cliente entre em contato com a Existence carde Tel: (75) 3631-5469<p>';
 
                                         }else{
-                                            echo date('d/m/Y', strtotime($r['validade']));
+                                            echo date('d/m/Y', strtotime($validade));
 
                                         } ?>    
                                     </p>
@@ -91,7 +90,7 @@
                                     <h4 class="timeline-title">Matrícula:</h4>
                                 </div>
                                 <div class="timeline-body">
-                                    <p><?php echo$r['contrato'];?>.<?php echo$r['contrato_sequencia'];?></p>
+                                    <p><?php echo $contrato;?>.<?php echo $contrato_sequencia;?></p>
                                 </div>
                             </div>
                         </li>
@@ -102,7 +101,7 @@
                                     <h4 class="timeline-title">Tipo:</h4>
                                 </div>
                                 <div class="timeline-body">
-                                    <?php if($r['contrato_sequencia'] == '01') { ?>
+                                    <?php if($contrato_sequencia == '01') { ?>
                                     <p>Titulár</p>
                                     <?php }else{ ?>
                                     <p>Dependente</p>
@@ -116,16 +115,16 @@
                 </div>
                 <div>
 
-                 <?php } ?>   
              </div>
 
              <div class="col-md-12">
-                 <?php if(strtotime($r['validade']) < strtotime(date('Y-m-d')) || $r['situacao'] != 1 ){ ?>
+                 <?php if(strtotime($validade) < strtotime(date('Y-m-d')) || $situacao != 1 ){ ?>
                  <button type="submit" class="btn btn-danger btn-lg btn-block disabled">não é possível iniciar solicitação com pendências </button>
                  <?php }else{ ?>
 
-                 <button type="submit" class="btn btn-success btn-lg btn-block">Iniciar Solicitação</button>
 
+                 <a href="<?php echo base_url();?>requisicao/<?= $contrato.$contrato_sequencia; ?>"><button type="submit" class="btn btn-success btn-lg btn-block">Iniciar Solicitação</button></a>
+</form>
                  <?php } ?>
              </div>
          </div>
