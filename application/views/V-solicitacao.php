@@ -1,4 +1,4 @@
-<?php  $this->load->view('temas/topo-painel'); ?>
+<?php $this->load->view('temas/topo-painel'); ?>
 <?php $this->load->view('temas/menu-painel'); ?>
 
 <div class="col-sm-9 col-sm-offset-3 col-lg-10 col-lg-offset-2 main">
@@ -25,12 +25,9 @@
                     <?php if($this->session->flashdata('erro')){ ?>
                     <div id="erro" class="alert bg-danger" role="alert"><em class="fa fa-lg fa-warning">&nbsp;</em>
                         <?php echo $this->session->flashdata('erro'); ?>
-                    </div>
-                    
-                    <?php }?>
+                    </div><?php } ?>
                     
                     
                 </div>
             </div>         
-        </div>
-        <?php  $this->load->view('temas/rodape-painel'); ?>
+        </div><?php $this->load->view('temas/rodape-painel');?>

@@ -8,8 +8,8 @@ class M_cliente extends CI_Model {
     public function consultar_por_matricula($matricula) {
         $this->db->select('*', FALSE);
         $this->db->where('CONCAT(contrato, contrato_sequencia) like ',$matricula);
-                
-        return $this->db->get('cliente')->row();
+        $query = $this->db->get('cliente')->row();         
+        return $query;
     }
 
     public function validar($contrato){

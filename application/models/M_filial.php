@@ -34,4 +34,4 @@ class M_filial extends CI_Model {
 
 }
 
-?> 
+?>

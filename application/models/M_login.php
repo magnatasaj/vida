@@ -11,13 +11,12 @@ class M_login extends CI_Model {
         $this->db->where('senha', $senha);
         $this->db->where('filial', $filial);
         
-        $query = $this->db->get('login');
-        if ($query->num_rows() ==1) {
-            $data = $query->row_array();
-            $data['ultimo_acesso'] = date('Y-m-d H:i:s');
-
-            $this->update($data, $data['id_login']);
-            return true; 
+        $query = $this->db->get('login')->row();
+        if ($query) {
+            
+            $query->ultimo_acesso =  date('Y-m-d H:i:s'); 
+            print_r($query);
+            return $query; 
         }
     }
 
@@ -43,4 +42,4 @@ class M_login extends CI_Model {
 
 }
 
-?> 
+?>

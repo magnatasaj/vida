@@ -8,6 +8,7 @@ class Requisicao extends CI_Controller
     function __construct()
     {
         parent::__construct();
+
         date_default_timezone_set('America/Sao_Paulo'); # add your city to set local time zone
         $now = date('Y-m-d H:i:s');
         $this->load->model('M_login');
@@ -15,6 +16,11 @@ class Requisicao extends CI_Controller
         $this->load->model('Requisicao_model');
         $this->load->model('M_cliente');
 
+         if(null == $this->session->userdata('id')){
+         $this->session->set_flashdata('erro','Voçê não está logado!'.
+          '<br>Logue para ter acesso!');  
+        redirect();
+        }
 
     }
 
@@ -24,14 +30,15 @@ class Requisicao extends CI_Controller
      $contrato =  $this->uri->segment(2,0);
      if($this->M_cliente->validar($contrato)){
         $row = $this->M_cliente->consultar_por_matricula($contrato);
-        $data = array(
-            'id_cliente' => $row->id_cliente ,
-            'id_login' => $this->session->userdata('id'),
-            'situacao' =>  1 );
-        $grava = $this->Requisicao_model->insert($data);
-        $dados = array("produtosVendidos" => $row);
-        $dados['protocolo'] = $this->db->insert_id();
-        print_r($dados);
+        $row->id_login = $this->session->userdata('id');
+        $row->situacao = 1; 
+        $dados = array(
+            'id_cliente' =>  $row->id_cliente ,
+            'id_login' => $row->id_login,
+            'situacao' => 1);
+        $this->Requisicao_model->insert($dados);
+        $row->protocolo = $this->db->insert_id();
+        print_r($row);
 
 
         

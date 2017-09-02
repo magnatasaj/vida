@@ -22,12 +22,14 @@ class Login extends CI_Controller {
         $login = $this->input->post('login');
         $senha = $this->input->post('senha');
         $filial = $this->input->post('filial');
-        $boleano =  $this->M_login->autenticacao($login, $senha,$filial);
+        $row =  $this->M_login->autenticacao($login, $senha,$filial);
         
 
-        if ($boleano) {
+        if ($row) {
+            
+
             $d_sessao = array(
-                'id' => '1',
+                'id' => $row->id_login,
                 'login' => $login,
                 'filial' => $filial
             );
