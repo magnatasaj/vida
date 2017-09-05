@@ -2,6 +2,7 @@
 
 if (!defined('BASEPATH'))
   exit('No direct script access allowed');
+ini_set('display_errors', 0);
 
 class Solicitacao extends CI_Controller {
 
