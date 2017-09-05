@@ -123,8 +123,7 @@
                  <?php }else{ ?>
 
 
-                 <a href="<?php echo base_url();?>requisicao/<?= $contrato.$contrato_sequencia; ?>"><button type="submit" class="btn btn-success btn-lg btn-block">Iniciar Solicitação</button></a>
-</form>
+                 <a href="<?php echo base_url();?>requisicao/add/<?= $contrato.$contrato_sequencia; ?>"><button type="submit" class="btn btn-success btn-lg btn-block">Iniciar Solicitação</button></a>
                  <?php } ?>
              </div>
          </div>

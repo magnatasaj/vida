@@ -20,6 +20,16 @@ class M_login extends CI_Model {
         }
     }
 
+    public function get_id($id) {
+        $this->db->where('id_login', $id);
+        
+        
+        $query = $this->db->get('login')->row();
+        if ($query) {
+           return $query; 
+        }
+    }
+
     public function insert($data) {
         if ($this->db->insert("login", $data)) {
             return true;

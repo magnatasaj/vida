@@ -80,7 +80,20 @@
 			</div>
 		</form>
 		<ul class="nav menu">
-			<li class="active"><a href="<?= base_url() ?>solicitacao"><em class="fa fa-dashboard">&nbsp;</em>SOLICITAÇÕES</a></li>
+			<li class="parent "><a data-toggle="collapse" href="#sub-item-1">
+				<em class="fa fa-dashboard">&nbsp;</em> SOLICITAÇÕES <span data-toggle="collapse" href="#sub-item-1" class="icon pull-right"><em class="fa fa-plus"></em></span>
+				</a>
+				<ul class="children collapse" id="sub-item-1">
+					<li><a class="" href="<?= base_url() ?>solicitacao">
+						<span class="fa fa-arrow-right">&nbsp;</span> Iniciar
+					</a></li>
+					<li><a class="" href="<?= base_url() ?>solicitacao/consultar_matricula_protocolo">
+						<span class="fa fa-arrow-right">&nbsp;</span> consultar
+					</a></li>
+					
+				</ul>
+			</li>
+			<li class="active"><a href=""><em class="fa fa-dashboard">&nbsp;</em>SOLICITAÇÕES</a></li>
 			<li><a href="widgets.html"><em class="fa fa-calendar">&nbsp;</em> Widgets</a></li>
 			<li><a href="charts.html"><em class="fa fa-bar-chart">&nbsp;</em> Charts</a></li>
 			<li><a href="elements.html"><em class="fa fa-toggle-off">&nbsp;</em> UI Elements</a></li>
