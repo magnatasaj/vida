@@ -6,6 +6,8 @@
 					<span class="icon-bar"></span>
 					<span class="icon-bar"></span></button>
 				<a class="navbar-brand" href="#"><span>Lumino</span>Admin</a>
+				<div id="breadcrumb"> <a href="<?php echo base_url()?>" title="Dashboard" class="tip-bottom"><i class="icon-home"></i> Dashboard</a> <?php if($this->uri->segment(1) != null){?><a href="<?php echo base_url().'index.php/'.$this->uri->segment(1)?>" class="tip-bottom" title="<?php echo ucfirst($this->uri->segment(1));?>"><?php echo ucfirst($this->uri->segment(1));?></a> <?php if($this->uri->segment(2) != null){?><a href="<?php echo base_url().'index.php/'.$this->uri->segment(1).'/'.$this->uri->segment(2).'/'.$this->uri->segment(3) ?>" class="current tip-bottom" title="<?php echo ucfirst($this->uri->segment(2)); ?>"><?php echo ucfirst($this->uri->segment(2));} ?></a> <?php }?></div>
+  </div>   
 				<ul class="nav navbar-top-links navbar-right">
 					<li class="dropdown"><a class="dropdown-toggle count-info" data-toggle="dropdown" href="#">
 						<em class="fa fa-envelope"></em><span class="label label-danger">15</span>
@@ -38,6 +40,7 @@
 							</li>
 						</ul>
 					</li>
+
 					<li class="dropdown"><a class="dropdown-toggle count-info" data-toggle="dropdown" href="#">
 						<em class="fa fa-bell"></em><span class="label label-info">5</span>
 					</a>
@@ -62,8 +65,11 @@
 			</div>
 		</div><!-- /.container-fluid -->
 	</nav>
+
 	<div id="sidebar-collapse" class="col-sm-3 col-lg-2 sidebar">
+
 		<div class="profile-sidebar">
+
 			<div class="profile-userpic">
 				<img src="" class="img-responsive" alt="">
 			</div>
@@ -74,11 +80,13 @@
 			<div class="clear"></div>
 		</div>
 		<div class="divider"></div>
+
 		<form role="search">
 			<div class="form-group">
 				<input type="text" class="form-control" placeholder="Search">
 			</div>
 		</form>
+
 		<ul class="nav menu">
 			<li class="parent "><a data-toggle="collapse" href="#sub-item-1">
 				<em class="fa fa-dashboard">&nbsp;</em> SOLICITAÇÕES <span data-toggle="collapse" href="#sub-item-1" class="icon pull-right"><em class="fa fa-plus"></em></span>

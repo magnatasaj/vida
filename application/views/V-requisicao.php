@@ -86,9 +86,7 @@
             <td><?php echo $item->valor ?></td>
             <td><?php echo $item->desconto ?></td>
             <td style="text-align:center" width="200px">
-                <?php 
-               echo anchor(site_url('item/delete/'.$item->id_item),'Remover','onclick="javasciprt: return confirm(\'Você tem certeza ?\')"'); 
-                ?>
+              <span idAcao="<?php echo $item->id_item?>" title="Excluir item" class="btn btn-danger"><i class="icon-remove icon-white"></i></span>
             </td>
         </tr>
                 <?php
@@ -152,6 +150,34 @@
 
              }
              
+       });
+
+$(document).on('click', 'span', function(event) {
+            var idServico = $(this).attr('idAcao');
+            var apagar = confirm('Deseja realmente excluir este registro?');
+      if (apagar){
+            if((idServico % 1) == 0){
+                $("#divProdutos").html("<div class='progress-bar progress-bar-striped active' role='progressbar'  aria-valuenow='100' aria-valuemin='0' aria-valuemax='100' style='width:100%'>CARREGANDO...</div>");
+                $.ajax({
+                  type: "POST",
+                  url: "<?php echo base_url();?>item/delete",
+                  data: "iditem="+idServico,
+                  dataType: 'json',
+                  success: function(data)
+                  {
+                    if(data.result == true){
+                         $( "#divProdutos" ).load("<?php echo current_url() ?> #divProdutos" );
+
+                    }
+                    else{
+                        alert('Ocorreu um erro ao tentar remover!.');
+                    }
+                  }
+                  });
+                  return false;
+            }
+          }
+
        });
 $("#valor,#desconto").maskMoney({
                 symbol: '',

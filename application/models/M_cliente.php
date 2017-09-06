@@ -8,14 +8,14 @@ class M_cliente extends CI_Model {
     public function consultar_por_matricula($matricula) {
         $this->db->select('*', FALSE);
         $this->db->where('CONCAT(contrato, contrato_sequencia) like ',$matricula);
-        $query = $this->db->get('cliente')->row();         
+        $query = $this->db->get('cadastro')->row();         
         return $query;
     }
 
     public function validar($contrato){
         $query = $this->consultar_por_matricula($contrato);
         $retorno  = FALSE;
-        if(strtotime($query->validade) < strtotime(date('Y-m-d')) || $query->situacao != 1 ){
+        if(strtotime($query->validade) < strtotime(date('Y-m-d')) || 1!= 1 ){
 
         }else{
             $retorno = true;

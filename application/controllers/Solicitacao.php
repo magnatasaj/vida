@@ -42,6 +42,11 @@ class Solicitacao extends CI_Controller {
         '<br> Atendente, solicite que o cliente que  entre em contato, e peça o seu ExistenceCard Tel: (75) 3631-5469');
        redirect('/solicitacao');
      }
+
+       // $this->load->helper('mpdf');
+        //$html = $this->load->view('relatorio/V-protocolo','',TRUE);
+
+        //pdf_create($html, 'a', TRUE);
    }
 
      public function consultar_matricula_protocolo() {
@@ -52,10 +57,10 @@ class Solicitacao extends CI_Controller {
       $matricula = 0;
     }
       $row = $this->M_cliente->consultar_por_matricula($matricula);
-      
+      print_r($row);
       if($row){
         echo 'entrou';
-        $pro = $this->Requisicao_model->get_all_por_cliente($row->id_cliente);
+        $pro = $this->Requisicao_model->get_all_por_cliente($row->Código);
         $row->requisicao_data = $pro;
         $this->load->view('V-solicitacao-consultar-protocolo',$row);
       }else{

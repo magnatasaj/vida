@@ -33,8 +33,9 @@ class Requisicao extends CI_Controller
         $row = $this->M_cliente->consultar_por_matricula($contrato);
         $row->id_login = $this->session->userdata('id');
         $row->situacao = 1; 
+        print_r($row);
         $dados = array(
-            'id_cliente' =>  $row->id_cliente ,
+            'id_cliente' =>  $row->Código ,
             'id_login' => $row->id_login,
             'situacao' => 1,
             'data' => date('Y-m-d H:i:s'));

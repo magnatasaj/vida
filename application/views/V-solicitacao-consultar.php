@@ -35,7 +35,7 @@
                             </li>
                             <li>
                                 <div class="timeline-badge
-                                <?php if( $situacao != 1){echo 'danger';}else{echo 'success';} ?>
+                                <?php if( 1 != 1){echo 'danger';}else{echo 'success';} ?>
 
                                 "><em  style="margin-top:8px; " class="glyphicon glyphicon-tags"></em></div>
                                 <div class="timeline-panel green ">
@@ -44,7 +44,7 @@
                                     </div>
                                     <div class="timeline-body" >
                                         <p><?php echo $cpf;?></p>
-                                        <?php if( $situacao != 1){
+                                        <?php if( 1 != 1){
                                            echo '<p style="color:red;">Há pendencias com o cartão consultado!</p>'
                                            . '<p> Atendente, solicite que o cliente entre em contato com a Existence carde Tel: (75) 3631-5469<p>';
                                        }?>
@@ -118,7 +118,7 @@
              </div>
 
              <div class="col-md-12">
-                 <?php if(strtotime($validade) < strtotime(date('Y-m-d')) || $situacao != 1 ){ ?>
+                 <?php if(strtotime($validade) < strtotime(date('Y-m-d')) || 1!= 1 ){ ?>
                  <button type="submit" class="btn btn-danger btn-lg btn-block disabled">não é possível iniciar solicitação com pendências </button>
                  <?php }else{ ?>
 

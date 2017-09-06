@@ -136,18 +136,22 @@ class Item extends CI_Controller
         }
     }
     
-    public function delete($id) 
+    public function delete() 
     {
+             $id =  $this->input->post('iditem',TRUE);
+
         $row = $this->Item_model->get_by_id($id);
 
         if ($row) {
             $this->Item_model->delete($id);
             $this->session->set_flashdata('message', 'Delete Record Success');
-            redirect(site_url('item'));
+             echo json_encode(array('result'=> true));
+
         } else {
             $this->session->set_flashdata('message', 'Record Not Found');
-            redirect(site_url('item'));
+            echo json_encode(array('result'=> false));
         }
+
     }
 
     public function _rules() 
