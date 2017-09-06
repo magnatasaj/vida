@@ -11,14 +11,14 @@ function pdf_create($html, $filename, $stream = TRUE)
     $mpdf = new mPDF();
 
     //$mpdf->SetAutoFont();
-     $mpdf->AddPage('L', // L - landscape, P - portrait
+     $mpdf->AddPage('P', // L - landscape, P - portrait
             '', '', '', '',
-            2, // margin_left
-            2, // margin right
-            2, // margin top
-            2, // margin bottom
-            2, // margin header
-            2); // margin footer
+            4, // margin_left
+            4, // margin right
+            4, // margin top
+            4, // margin bottom
+            4, // margin header
+            4); // margin footer
 
     $mpdf->WriteHTML($html);
 

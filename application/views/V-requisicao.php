@@ -108,7 +108,11 @@
                 </div>
 
                 <?php }?>
-
+                <div class="row">
+                <div class="col-sm-12">
+                  <a href="<?php echo base_url();?>requisicao/upstatus/<?= $contrato.$contrato_sequencia.'/'.$protocolo; ?>"><button type="submit" class="btn btn-success btn-lg btn-block">Efetivar solicitação e imprimi-lá</button></a>
+                  </div>
+                </div>
 
             </div>
         </div>         

@@ -43,10 +43,10 @@ class Solicitacao extends CI_Controller {
        redirect('/solicitacao');
      }
 
-       // $this->load->helper('mpdf');
-        //$html = $this->load->view('relatorio/V-protocolo','',TRUE);
+      // $this->load->helper('mpdf');
+       // $html = $this->load->view('relatorio/V-protocolo','',TRUE);
 
-        //pdf_create($html, 'a', TRUE);
+       //pdf_create($html, 'a', TRUE);
    }
 
      public function consultar_matricula_protocolo() {
@@ -72,7 +72,6 @@ class Solicitacao extends CI_Controller {
      }
 
    }
-
 
 
 
