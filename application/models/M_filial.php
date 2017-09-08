@@ -12,25 +12,32 @@ class M_filial extends CI_Model {
         return $query;
     }
 
-    public function insert($data) {
-        if ($this->db->insert("login", $data)) {
-            return true;
-        }
-    }
+    public function get($id) {
+     $this->db->where("id_filial", $id);
 
-    public function delete($roll_no) {
-        if ($this->db->delete("stud", "roll_no = " . $roll_no)) {
-            return true;
-        }
-    }
+     $query = $this->db->get('filiais')->row();
+     return $query;
+ }
 
-    public function update($data, $id) {
-
-        $this->db->set($data);
-        $this->db->where("id_login", $id);
-        $this->db->update("login", $data);
-        return True;
+ public function insert($data) {
+    if ($this->db->insert("login", $data)) {
+        return true;
     }
+}
+
+public function delete($roll_no) {
+    if ($this->db->delete("stud", "roll_no = " . $roll_no)) {
+        return true;
+    }
+}
+
+public function update($data, $id) {
+
+    $this->db->set($data);
+    $this->db->where("id_login", $id);
+    $this->db->update("login", $data);
+    return True;
+}
 
 }
 

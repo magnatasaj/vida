@@ -18,6 +18,7 @@ class Requisicao extends CI_Controller
         $this->load->model('M_cliente');
         $this->load->model('M_item');
         $this->load->helper('mpdf');
+        $this->load->helper("moeda");
 
         if(null == $this->session->userdata('id')){
          $this->session->set_flashdata('erro','Voçê não está logado!'.
@@ -81,15 +82,25 @@ class Requisicao extends CI_Controller
     public function additem()
     {
 
+       $valor = strtr($this->input->post('valor'), '.', '');
+       $valor = strtr($valor, ',', '.');
+       $desc = strtr($this->input->post('desconto'), '.', '');
+       $desc = strtr($desc, ',', '.');
+
      $data = array(
       'id_requisicao' => $this->input->post('id_requisicao',TRUE),
       'descricao' => $this->input->post('descricao',TRUE),
-      'valor' =>  $this->input->post('valor',TRUE),
-      'desconto' => $this->input->post('desconto',TRUE)
+      'valor' =>  $valor,
+      'desconto' => $desc
       );
-
+     if(validar($this->input->post('valor')) && validar($this->input->post('desconto'))){
      $this->M_item->insert($data);
-     echo json_encode(array('result'=> true));
+          echo json_encode(array('result'=> true));
+
+   }else{
+         echo json_encode(array('result'=> FALSE, 'msg' => 'Valor não está no formado Brasleiro'));
+
+   }  
 
 
 
@@ -105,6 +116,7 @@ class Requisicao extends CI_Controller
      if($this->M_cliente->validar($contrato)){
       $row = $this->M_cliente->consultar_por_matricula($contrato);
       $row->id_login = $this->session->userdata('id');
+      $row->filial = $this->M_filial->get($this->session->userdata('filial'));
       
       // dados para update
       $dados = array(

@@ -1,6 +1,4 @@
-<?php if(null == $this->session->userdata('id')){
-     echo 'Não logado';
-}else{
+
 ?>
 <?php  $this->load->view('temas/topo-painel'); ?>
 <?php $this->load->view('temas/menu-painel'); ?>
@@ -8,4 +6,4 @@
            
       
 
-<?php $this->load->view('temas/rodape-painel'); } ?>
+<?php $this->load->view('temas/rodape-painel'); ?>

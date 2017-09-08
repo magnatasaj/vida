@@ -6,16 +6,17 @@
 
 <div class="col-sm-9 col-sm-offset-3 col-lg-10 col-lg-offset-2 main">
     <div class="row">
-        <div class="panel panel-info">
+        <div class="panel panel-success">
             <div class="panel-heading">Consultar Protocolo pela mtrícula
                 <span class="pull-right clickable panel-toggle"><em class="fa fa-toggle-up"></em></span></div>
                 <div class="panel-body">
                 <div class="row">
                     <form name="novacon" role="form" method="post" action="<?php echo base_url();?>solicitacao/consultar_matricula_protocolo">
                         <fieldset>
+                        <p>Exemplo de matricula 000111.01, deve ser digitado no campo de busca asim: 0001111, sem o ponto e o zero apóis o ponto<p>
                             <div class="form-group">
                                 <div class="form-group">
-                                    <input class="form-control" placeholder="Digite a matrícula" name="matricula" type="text" autofocus="" required="">
+                                    <input class="form-control" placeholder="Digite a matrícula " name="matricula" type="text" autofocus="" required="">
                                 </div>
                             </div>
 
@@ -46,7 +47,7 @@
 
                             <div class="timeline-panel green ">
                                 <div class="timeline-heading da">
-                                    <h4 class="timeline-title">Protocolo:</h4>
+                                    <h4 class="timeline-title">Matrícula:</h4>
                                 </div>
                                 <div class="timeline-body" >
                                     <h1><?php echo $r2 = (isset($contrato)) ? $contrato.'.'.$contrato_sequencia : 'Não encontrado';?></h1>
@@ -64,9 +65,9 @@
                         <table class="table table-bordered" style="margin-bottom: 10px">
                             <tr>
                                 <th>Protocolo</th>
-                                <th>Id Login</th>
+                                <th>Atendente</th>
                                 <th>Situacao</th>
-                                <th>Action</th>
+                                <th>Ação</th>
                             </tr><?php
                             if(isset($requisicao_data)){
                             foreach ($requisicao_data as $requisicao)
@@ -76,7 +77,7 @@
                                 <tr>
                                 <td width="80px"><?php echo $requisicao->id_requisicao ?></td>
                                     <td><?php echo $user->nome ?></td>
-                                    <td><?php echo $requisicao->situacao ?></td>
+                                    <td><?php echo $r = ($requisicao->situacao == 2) ? 'Impresso' : 'Iniciado' ;  ?></td>
                                     <td style="text-align:center" width="200px">
                                         <?php 
                                        

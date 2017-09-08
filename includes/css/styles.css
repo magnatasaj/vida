@@ -80,7 +80,8 @@ input.form-control {
 
 .navbar-custom {
   background: #222;
-  height: 60px; }
+  height: 60px;
+  background-color: green }
 
 .navbar-header .navbar-brand {
   color: #fff;
@@ -88,10 +89,14 @@ input.form-control {
   text-transform: uppercase;
   font-weight: 500;
   height: 60px;
-  padding-top: 18px; }
+  width: 17%;
+  padding-top: 5px;
+  background-color: #fffff0 }
 
 .navbar-header .navbar-brand span {
-  color: #30a5ff; }
+  color: #30a5ff; 
+  background-color: green
+}
 
 .navbar-toggle {
   background: rgba(255, 255, 255, 0.1);
@@ -782,10 +787,31 @@ a.label:hover, a.label:focus {
     overflow-y: auto; }
 
   .navbar-header {
-    width: 100%; } }
+    width: 100%; }
+    .navbar-header .navbar-brand {
+  color: #fff;
+ 
+   }
+
+     }
+
+ @media (max-width: 768px) {
+  
+.navbar-header {
+    width: 100%;
+    background-color: green
+  }
+    .navbar-header .navbar-brand {
+  color: #fff;
+  background-color: green
+ 
+   }
+ 
+
+     }    
 .sidebar ul.nav a:hover, .sidebar ul.nav li.parent ul li a:hover {
   text-decoration: none;
-  background-color: #30a5ff;
+  background-color: green;
   color: #fff; }
 
 .sidebar ul.nav .active a, .sidebar ul.nav li.parent a.active, .sidebar ul.nav .active > a:hover, .sidebar ul.nav li.parent a.active:hover, .sidebar ul.nav .active > a:focus, .sidebar ul.nav li.parent a.active:focus {

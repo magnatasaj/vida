@@ -31,6 +31,7 @@ class Login extends CI_Controller {
             $d_sessao = array(
                 'id' => $row->id_login,
                 'login' => $login,
+                'nome' => $row->nome,
                 'filial' => $filial
             );
             $this->session->set_userdata($d_sessao);
