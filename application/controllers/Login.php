@@ -16,6 +16,7 @@ class Login extends CI_Controller {
     public function index() {
         $dados['dados'] = $this->M_filial->lista();
         $this->load->view('V-login', $dados);
+        
     }
 
     public function entrar() {
@@ -26,16 +27,17 @@ class Login extends CI_Controller {
         
 
         if ($row) {
-            
+
 
             $d_sessao = array(
                 'id' => $row->id_login,
                 'login' => $login,
                 'nome' => $row->nome,
                 'filial' => $filial
-            );
+                );
             $this->session->set_userdata($d_sessao);
-            $this->load->view('V-painel');
+            redirect('solicitacao');
+            //$this->load->view('V-painel');
         } else {
             $this->session->set_flashdata('erro', 'Login ou senha incorretos, tente novamente.');
             redirect();
@@ -46,12 +48,17 @@ class Login extends CI_Controller {
         $data = array(
             'nome' => $this->input->post('login'),
             'senha' => $this->input->post('senha')
-        );
+            );
 
 
         $this->M_login->insert($data);
         $this->session->set_flashdata('resposta', 'teste');
-       
+
+        redirect();
+    }
+
+    public function sair(){
+        $this->session->sess_destroy();
         redirect();
     }
 

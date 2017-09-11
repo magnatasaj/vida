@@ -36,7 +36,7 @@ class Requisicao extends CI_Controller
         $row = $this->M_cliente->consultar_por_matricula($contrato);
         $row->id_login = $this->session->userdata('id');
         $row->situacao = 1; 
-        print_r($row);
+       
         $dados = array(
           'id_cliente' =>  $row->Código ,
           'id_login' => $row->id_login,
@@ -82,11 +82,10 @@ class Requisicao extends CI_Controller
     public function additem()
     {
 
-       $valor = strtr($this->input->post('valor'), '.', '');
+       $valor = str_replace('.','',$this->input->post('valor'));
        $valor = strtr($valor, ',', '.');
-       $desc = strtr($this->input->post('desconto'), '.', '');
+       $desc = str_replace('.','',$this->input->post('desconto'));
        $desc = strtr($desc, ',', '.');
-
      $data = array(
       'id_requisicao' => $this->input->post('id_requisicao',TRUE),
       'descricao' => $this->input->post('descricao',TRUE),
@@ -96,9 +95,8 @@ class Requisicao extends CI_Controller
      if(validar($this->input->post('valor')) && validar($this->input->post('desconto'))){
      $this->M_item->insert($data);
           echo json_encode(array('result'=> true));
-
    }else{
-         echo json_encode(array('result'=> FALSE, 'msg' => 'Valor não está no formado Brasleiro'));
+        echo json_encode(array('result'=> FALSE, 'msg' => 'Valor não está no formado Brasleiro'));
 
    }  
 

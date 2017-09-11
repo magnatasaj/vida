@@ -86,7 +86,7 @@
               <td><?php echo  rs($item->valor) ?></td>
               <td><?php echo rs($item->desconto)  ?></td>
               <td style="text-align:center" width="200px">
-                <span idAcao="<?php echo $item->id_item?>" title="Excluir item" class="btn btn-danger"><i class="icon-remove icon-white"></i></span>
+                <span idAcao="<?php echo $item->id_item?>" title="Excluir item" class="btn btn-danger"><i class="icon-remove icon-white">remover</i></span>
               </td>
             </tr>
             <?php
@@ -141,6 +141,9 @@
     {
       if(data.result == true){
         $( "#divProdutos" ).load("<?php echo current_url() ?> #divProdutos" );
+        $("#descricao").val('').focus();
+        $("#valor").val('');
+        $("#desconto").val('');
 
       }
       else{
@@ -185,7 +188,7 @@
   }
 
 });
- $("#desconto").maskMoney({
+ $("#valor,#desconto").maskMoney({
   symbol: '',
   showSymbol: true,
   thousands: '.',

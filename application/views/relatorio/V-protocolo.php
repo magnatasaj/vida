@@ -61,7 +61,7 @@
 	<tr valign="top">
 		<td colspan="2" width="892" height="19" style="border-top: 1px solid #000000; border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: none; padding-top: 0.05cm; padding-bottom: 0.05cm; padding-left: 0.05cm; padding-right: 0cm">
 			<p><font size="5" style="font-size: 18pt">NOME: <?php echo
-			strtoupper($nome) ?></font></p>
+			strtoupper($nome.' e Samile') ?></font></p>
 		</td>
 		<td width="359" style="border: 1px solid #000000; padding: 0.05cm">
 			<p><font size="5" style="font-size: 18pt">DATA:<?php echo date('d/m/Y H:m:s', strtotime($d)) ?></font></p>

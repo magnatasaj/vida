@@ -51,7 +51,7 @@
 				</ul>
 			</li>
 			
-			<li><a href="login.html"><em class="fa fa-power-off">&nbsp;</em> Logout</a></li>
+			<li><a href="<?= base_url() ?>login/sair"><em class="fa fa-power-off">&nbsp;</em> Sair</a></li>
 		</ul>
 	</div><!--/.sidebar-->
 		
